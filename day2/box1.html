@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* margin은 값을 1개,2개(상하,좌우),4개를 사용할때는 
+        /상하좌우를 구분해서 입력해줘야한다  위 오른쪽 아래 왼쪽 순서 4개의 값 입력시 */
+        div{
+            margin: 10px 10px 100px 100px;
+            /* margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;  위에 한줄과 동일하다 
+             margin : 10px auto 를 사용하면 가운데 정렬을 할 수 있다*/
+        }
+        .box1{
+            border : 1px solid black;
+            /* border 는 선을 긋는 용도  
+            border-width: 1px;
+            border-style: solid;
+            border-color: black; 
+            보더는 3가지로 이루어져 있다 위에 한줄이 밑에 3줄을 요약한것 
+            width 를 통해 크기를 조정할 수 있다  text-align 은 좌우만 정렬
+            line-height 를 위 아래와 같은 값을 넣으면 텍스트가 가운데로 정렬된다 */
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .box2{
+            border : 1px solid black;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background-color: aqua;
+            border-top-color:crimson;
+            border-radius: 50%; /* 끝이 둥글둥글 하게 변함  */
+            box-shadow: 1px 1px 1px blue;
+        }
+        .pd{
+            padding: 5px 10px 15px 20px;
+            /* padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px; */
+        }
+        /*padding  
+        상하좌우를 구분해서 입력해줘야한다  위 오른쪽 아래 왼쪽 순서 4개의 값 입력시 */
+    </style>
+</head>
+<body>
+    <div class="box1 pd">box1</div>
+    <div class="box2">box2</div>
+</body>
+</html>
