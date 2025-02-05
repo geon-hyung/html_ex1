@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    아이디:<input type="text" placeholder="아이디를 입력하세요.">
+</div>
+    <div>
+    비밀번호:<input type="password" placeholder="비밀번호를 입력하세요.">
+<div>
+    <div>
+        <input type="button" value="로그인!" onclick="alert('로그인성공!')">
+    </div>
+    <hr>
+    <div>
+       숫자입력 : <input type="number">
+       날짜 : <input type="date" min="2025-01-01" max="2025-02-05">
+       <!-- 선택할 수 있는 범위(최소 값 최대 값을) min , max를 통해 정할 수 있다  -->
+    </div>
+    <div>
+        <label><input type="checkbox" checked> 자바</label>
+        <label><input type="checkbox"> 오랑이</label>
+        <label><input type="checkbox"> html</label>
+        <!-- lable 을 사용하면 input 박스내에서 텍스트를 클릭해도 체크박스가 작동한다 
+         checked를 사용하면 실행시 바로 체크된 상태로 한다 -->
+    </div>
+
+    <div>
+        <label><input type="radio" name="subject"> 자바</label>
+        <label><input type="radio" name="subject"> 오랑이</label>
+        <label><input type="radio" name="subject"> html</label>
+    <!-- radio(중복 x) 와 checkbox(중복 o) 차이 중복을 허용하나 허용하지 않나 차이  
+     name= "subject"를 사용하면 중복허용을 막아서 하나만 체크할수 있게 된다 -->
+
+    </div>
+    <div>
+        <label><input type="radio"name="subject">남자</label>
+        <label><input type="radio"name="subject">여자</label>
+    </div>
+    <div>
+        <input type="file">
+        <!-- type 에서 file 을 사용하면 첨부파일을 넣을 수 있다  -->
+         
+    </div>
+    <div>
+        <textarea rows="10" cols="50" placeholder="자기소개"></textarea>
+    </div>
+ <!-- textarea 글자수가 많이 입력시 사용 ex  자기소개서  -->
+    <div>
+        <select>
+            <option>자바</option>
+            <option>html</option>
+            <option>오랑이</option>
+
+        </select>
+        <!-- select 드랍다운 option 을 사용해서 스크롤안에 선택할 수 있게한다   -->
+    </div>
+</body>
+</html>
+
+
+<!-- input 태그를 사용하면 텍스트를 입력받는 박스 하나가 생성된다 
+type 으로 여러가지를 분류하게 되며 디폴트 값이 텍스트다9
+placeholder = 텍스트창에 설명을 보여준다 /div 태그를 사용해서 
+줄바꿈을 한다 input type 을 password 로 두게 되면 비공개로 가려져서
+나오게된다 button 타입을 사용시 버튼에 이름을 넣고 싶다면 value를 사용
+value를 사용해서 기존 텍스트 타입에 값을 입력할 수 있다
+disabled를 사용하면 값을 수정을 못함  /onclick="alert('로그인성공!')
+사용시 로그인 성공이라는 이벤트가 발생하여 창이 뜬다 -->

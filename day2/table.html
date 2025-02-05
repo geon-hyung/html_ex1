@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 보더  =테두리 선 / px는 굵기 , 패딩은 안쪽 여백  */
+        table, tr, th, td {
+            border: 2px solid blueviolet;  
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <th>숫자1</th>
+            <th>숫자2</th>
+            <th>숫자3</th>
+            <th>숫자4</th>
+            
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td colspan="2">5</td>
+            <td>6</td>
+            <td rowspan="2">7</td>
+        
+
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td> 
+        </tr>
+        <tr></tr>
+
+
+    </table>
+    
+</body>
+</html>
+<!-- table 의 구조는 행과 열로 이루어져잇다
+<tr></tr>을 사용시 줄을 정한다 2개면 2줄  /td는 행을 나타낸다
+<th>는 헤더를 의미하고 상단에 디폴트 값으로 글자가 진하게 나온다
+<td colspan="2">5</td> 행()으로 2칸을 차지한다 
+rowspan 을 사용하면 열에서 2칸을 차지한다 -->
