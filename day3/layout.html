@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            margin: 10px auto;
+        }
+        #header{
+            width: 100%;
+            height: 150px;
+            background-color: aqua;
+        }
+        #sidebar{
+            width: 200px;
+            height: 700px;
+            background-color: brown;
+            float: left;
+        }
+        #contents{
+            width: 800px;
+            height: 700px;
+            background-color: gold;
+            float: left;
+        }
+        #footer{
+            width: 100%;
+            height: 150px;
+            background-color: blue;
+            clear: both;
+        }
+        /* margin 좌우여백 10 오토  전체 넓이 만큼 사용할땐 100%도 사용한다 */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="sidebar"></div>
+        <div id="contents"></div>
+        <div id="footer"></div>
+</body>
+</html>
+
+<!-- 전체영역, 넓이를 잡기위한 container 를 사용하고 , 컨테이너 안에서 작업   -->

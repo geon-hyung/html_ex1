@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color:  rgb(38, 13, 223);
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            top: 30px;
+            right: 100px;
+            /* fixed 좌표로 위치를 정한다(top , right , left) 스크롤에 영향을 받지않고 고정되어 있다*/
+
+        }
+        .box2{
+            background-color:  rgb(255, 1, 115);
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            
+            /* position relative  원래 있어야할 위치에서 상대적으로 이동  
+            static은 속성 이동이 되지 않음. absolute 상위 요소가 static 이라면 반응을 하지않고 
+            static이 아니라면 요소위치를 기준으로 반응한다 */
+        }
+        .box3{
+            background-color:  green;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+            position: absolute; 
+            top: 30px;
+            left: 30px; 
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    
+    <div style="position: relative; margin-bottom: 2000px;">
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        border: 2px solid black;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        color: white;
+        display: inline-block;
+        margin: 5px;
+    }
+    #box1{background-color: blue;
+        float: left;
+            
+    }
+    #box2{background-color : red;
+        float: left;
+        /*     clear: both =  float 에 대한 영향을 받지않고 정상실행 된다 
+        float 은 공중에 떠있는 상태로 입력시 계속 곂곂친다  */
+    }
+    #box3{background-color: green;
+        clear: both;
+    }
+</style>
+</head>
+<body>
+    <div id="box1"> box1</div>
+    <div id="box2"> box2</div>
+    <div id="box3"> box3</div>
+</body>
+</html>
