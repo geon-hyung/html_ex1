@@ -22,30 +22,36 @@
         .box1{
             border: 1px solid black;
         }
-
-        table{
-            border: 2px solid gray;
-            font-style: italic;  
-
+        table, th, tr, td{
+            border: 1px solid black;
+            width: 700px;
+            height: 30px;
+            text-align: left;
         }
+        th{
+            background-color: aqua;
+        }
+        
+
     </style>
 </head>
-<table>
+
 <body>
     <div class="all txt1"> 자바 수강생 모집</div>
     <div class="all txt1">자바에 관심 있는 새내기 여러분을 모집합니다.</div>
+    <table style="border: 1px solid black;">
     <div class="all">교내 프로그래밍 동아리에서 신입생을 대상으로 자바 수강생을 모집합니다. </div>
     <div class="txt2">학부나 전공에 상관없습니다.</div>
     <div class="all">평소 방송에 관심있었던 여러 학우들의 지원바랍니다.</div>
     <table>
-        <tr>   <td>모집 기간 </td> 
+        <tr>   <th>모집 기간 </th> 
             <td>2월 5일 ~ 2월 11일</td>
-            </tr>
-            <td> 모집 분야 </td>
+        <tr>
+            <th> 모집 분야 </th>
             <td>자바기초, 자바 심화, 백엔드 입문</td>
+        </tr>
             
-            <tr>
-            <td>지원 방법 </td>	
+            <th>지원 방법 </th>	
             <td>양식 작성 후 이메일 접수
                 지원서 양식은 교내 동아리 홈페이지 공지 게시판에 있습니다.</td>
             
@@ -56,8 +62,9 @@
     <br>
     <div>1. 아주 작은 소정의 활동비 지급</div>
     <div>2. 주기적인 회식(필수 참여)</div>
-    <img src="media/jarong2.jpg" width="350" 
+    <img src="media/jarong2.jpg" width="350" >
 
+</table>
 </table>
 </body>
 </html>

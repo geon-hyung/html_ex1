@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 1px solid black;
+            width: 800px;
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
+            /*width 에 전체 값에서 일정하게 나눠 준게 auto-fit이다*/
+            grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+            /*최소값(100px)으로 최대한 컬럼을 많이 채울 수 있게 하는것이 auto-fill 이다 */
+        }
+        .box{
+            background-color: aqua;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+        .grad1{
+            background: linear-gradient(to right bottom, blue, white);
+        }
+        .grad2{
+            background: linear-gradient(20deg, blue, white);
+        }
+        .grad3{
+            background: linear-gradient(to right, blue, white 40%, blue);
+        }
+        /*  선형그라데이션 
+        to right = 왼쪽에서 오른쪽 to right bottom 왼쪽상단에서 오른쪽 아래로 점점 흐려
+        지면서  그라데이션 효과가 난다/ deg 를 사용해서 각도로도 사용이 가능하다  
+        그라데이션의 범위를 지정하는것도 가능하다 ex white 40%, blue.
+         */
+        
+    </style>
+</head>
+<body>
+    <div class="box grad3">
+
+    </div>
+
+</body>
+</html>
+<!-- .box{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+} -->

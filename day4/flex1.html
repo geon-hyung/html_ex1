@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            #container{
+                width: 700px;
+                background-color: #eee;
+                display: flex;
+            }
+            .box{
+                text-align: center;
+                width: 70px;
+                padding: 10px 40px;
+                margin: 5px;
+                background-color: cornflowerblue;
+            }
+            .dir1{
+                flex-direction: row;  /*한줄로서 왼쪽에서 오른쪽 정렬 */
+            }
+            .dir2{
+                flex-direction: row-reverse; /*한줄로서 오른쪽 에서 왼쪽으로 정렬 */
+            }
+            .dir3{
+                flex-direction: column;  /*위에서 아래로 정렬  */
+            }
+            .dir4{
+                flex-direction: column-reverse;  /*아래에서 위로 정렬  */
+            }
+    </style>
+</head>
+<body>
+    <div id="container" class="dir4">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+    }
+    .grad1{
+        background: radial-gradient(rgb(71, 5, 5),rgb(96, 96, 96),rgb(87, 126, 87));
+    }
+    .grad2{
+        background: radial-gradient(circle, rgb(71, 5, 5),rgb(96, 96, 96),rgb(87, 126, 87));
+    }
+    .grad3{
+        background: radial-gradient(circle at 25% 25%, rgb(71, 5, 5),rgb(96, 96, 96));
+    }
+    .grad4{
+        background: radial-gradient(rgb(71, 5, 5),rgb(179, 1, 255) 15%,rgb(60, 0, 255)50%);
+    }
+    /* 원형 그라데이션  circle을 사용하면 원형이 이쁘게나온다 
+    원형이 시작되는 위치를 정할 수 있다 컬러뒤에 퍼센트를 붙이면됨  */
+</style>
+</head>
+<body>
+    <div class="box grad4"></div>
+    <div class="box grad3"></div>
+</body>
+</html>

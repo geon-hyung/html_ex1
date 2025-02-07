@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="button" value="버튼1">  -->
+     <input id="num1" placeholder="숫자 1">
+     <input id="num2" placeholder="숫자 2">
+    <button onclick="sum()">더하기!</button> 
+    <!-- 파라미터가 없더라도 괄호를 입력  -->
+</body>
+</html>
+<script>
+    //DOM  
+    // 문서에서 아이디나 태그명으로 꺼내올수 있는 함수 querySelector 를 사용한다
+    // id를 꺼내오기 때문에 앞에 # 
+    function sum (){
+        // let obj1 = document.querySelector("#num1");
+        // let obj2 = document.querySelector("#num1");
+        // console.log(obj1 + obj2);
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        // console.log(parseInt(num1) +Number(num2));
+        //문자를 숫자로 parseInt == Number  변경해야 계산이 가능하다   
+        // js에선 == 이건 타입 비교를 안한다 , 값만 비교 한다 
+        // ===타입까지 비교를 하기때문에 같은 10이여도 문자열인지 숫자열인지 까지 비교한다 
+        if(num1 == 10){
+            alert("같다!");
+        } else{
+            alert("다르다");
+        }
+    }
+</script>
