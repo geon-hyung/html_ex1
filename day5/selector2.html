@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div + p {          /*div뒤에오는 첫번째 태그에 스타일 적용 */
+            color: red;
+        }
+        div ~ p {
+            background-color: aqua; /*div 뒤에오는 모든 p 태그에 스타일 적용 */
+        }
+        a[href]{
+            font-style: italic; /*a태그 중에서 href의 속성을 가진 태그한테만 스타일 적용*/
+        }
+
+    </style>
+</head>
+<body>
+    <div> 과목 목록</div>
+    <p style="margin-bottom: 1000px;">자바</p>
+    <p> <a href="javscript:;">오랑이 </a></p>    
+    <p><a href="#">html</a></p>  
+</body>
+</html>

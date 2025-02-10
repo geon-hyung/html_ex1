@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 500px;
+            margin: 10px auto;
+        }
+        #time{
+            font-size: 40px;
+            color: blue;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="contatiner">
+    <div id="time"></div>
+</div>
+</body>
+</html>
+<script> 
+
+
+setInterval(()=>{ //특정 주기별로 함수를 실행시킬 수 있는 것이다 
+    let datetime = new Date();
+    let time = 
+            datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds()
+    let obj = document.querySelector("#time");
+    obj.innerHTML = time;
+},1000);
+
+// setInterval(()=>{ //특정 주기별로 함수를 실행시킬 수 있는 것이다 
+    // alert("5초에 한번 실행 ")
+// },1000);
+// 화살표 함수 (arrow function) 파라미터안에 값을 입력가능하다 
+    //     setTimeout(()=>{
+    //         alert ("5초후 출력");
+    //     },5000)
+
+
+
+    // //익명 함수 . 함수를 선언하지않고 실행가능 , 파라미터안에 값을 입력가능하다 
+    // setTimeout(function(){
+    //     alert("5초후 출력");
+    // },5000)
+//     function fnAlert(){
+//         alert("안녕?!?!");
+//     }
+// //     setTimeout(fnAlert, 5000);
+// //특정시간이후에 실행할 수 있는 함수가 존재한다 setTimeout.
+// // 1함수를 파라미터로 넣는다,2 시간을 넣는다 밀리세컨즈로 5000이 5초다   
+</script>

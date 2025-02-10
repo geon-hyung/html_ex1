@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 100px;
+            transition: 3s;     /*3초에 거쳐서 회전을 시키겠다  디폴트 값이 all이므로 생략이 가능하다 */
+         
+        }
+        .box:hover{
+            /* transform: skewY(30deg);  y축으로 비틀어 준다 */
+            transform: skew(20deg, 10deg);  /*XYZ를 입력하지 않는다면 값을 직접 입력해줘야한다.*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

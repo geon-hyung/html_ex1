@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: beige;
+        }
+        .txt1{
+            font-weight: bold;
+        }
+        span{
+            background-color: aqua;
+        }
+        div span{             /*div 안에 있는 모든 태그(span)안에 있는 값들만 적용한다 */
+            font-size: 30px;
+        }
+        div > span{             /*div 안에있는 자식중에 span 태그가 있다면 그 태그에 입력한 값을 적용한다 */
+            font-style: italic;
+        }
+        div, span{
+            border: 1px solid black; /*모든 div 와 모든 span 에게 값을 적용한다 . */
+        }
+    </style>
+</head>
+<body>
+    <div class="txt1"> <a><span>자바</span></a>
+    </div> <span>오랑이</span>
+    <div class="txt1"><p>css</p> <span>html</span>
+</body>
+</html>

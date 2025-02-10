@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+
+            background-color: darkgreen;
+
+            animation-name: slider;
+            animation-duration: 3s;    /*몇초 동안 이동을 할 수 있는지 */
+            animation-iteration-count: infinite;             /*반복횟수를 정할 수 있고 infinite값을 쓰게되면 무한댈로 반복한다 */
+            animation-direction: alternate; /*방향의 양방향성을 갖고있어서 box 가 되돌아간다 */
+        }
+        /*keyframes 을 통해서 좀 더 애니메이션적인 효과를 줄 수 있다 */
+        @keyframes slider {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(400px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

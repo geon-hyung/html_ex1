@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 100px;
+            transition: 3s;     /*3초에 거쳐서 회전을 시키겠다  디폴트 값이 all이므로 생략이 가능하다 */
+         
+        }
+        .box:hover{
+            /* transform: scale(0.5);          /*scale 는 원래 값보다 키우거나 작게 만들 수 있다  */
+            transform: scaleX(2); /*rotate.와 동일하게 xyz이동 가능 하다 */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
