@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="../day5/media/chan.png" width="500" height="500">
+</body>
+</html>
+<script>
+    let img = document.querySelector("#img");
+    img.addEventListener("mouseover",()=>{
+        img.src = "../day5/media/cardback.png";
+    }); 
+    img.addEventListener("mouseout",()=>{
+        img.src = "../day5/media/chan.png";
+    });
+    
+    // 이벤트 리스너 = change, mouseover 마우스가 이미지에 올라갔을때 mouseout 는 마우스를 띄워을때 
+     
+
+</script>

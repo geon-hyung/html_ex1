@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light-mode{
+           
+            background-color: white;
+            
+        }
+        .dark-mode{
+           
+            background-color: black;
+            color: white;
+        }
+        #container{
+            width: 600px;
+            margin: 50px auto;
+            border: 1px solid black;
+        }
+        #btn{                           /*포지션을 사용해서 오른쪽 위로 옮기고 스크롤을 움직이더라도 같이 딸려 내려온다 */ 
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            padding : 10px;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .dark-mode #btn{                     /*다크모드안에 버튼을 변경하는것 */
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+        }
+
+    </style>
+</head>
+<body class="light-mode">
+    <div id="container">
+        <button id="btn" onclick="fnMode()">다크 모드</button>
+       <h1>프로그래밍 재밌다</h1>
+        <ul>
+            <li>HTML</li>
+            <li>css</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+<script>
+    function fnMode(){
+        let body = document.body;
+        classList.toggle('dark-mode');
+        body.classList.toggle('whiht-mode');
+
+        let btn = document.querySelector("#btn");
+        if(body.classList.contains('dark-mode')){
+            btn.innerHTML = '라이트 모드';
+        }else{
+            btn.innerHTML = '다크 모드';
+        };        //컨테인스안에 포함되어있는 걸 찾고 true or false 로 나뉜다 
+    }
+
+</script>

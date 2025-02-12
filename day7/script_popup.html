@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    ㅁㅔ인페이지
+    <button onclick="fnPopup()">팝업</button>
+</body>
+</html>
+<script>
+    function fnPopup(){
+    let top = (screen.availHeight - 500) / 2;
+    let left = (screen.availWidth - 500) / 2;
+    window.open( 'time.html', 'time', `witdh=500, height=500, left=${left}, top=${top}`);
+           //실행하면 팝업을 띄울수 있다 // 두번째 파라미터에 팝업에 이름을 설정하면 팝업창을 딱 하나만 생성한다 
+           // 팝업이 뜨는 위치도 지정할 수 있다 . 
+    }
+</script>
