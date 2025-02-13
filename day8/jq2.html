@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="/day2/media/jarong.jpg" width="500px" height="500px">
+    <div>
+    <button id="btn">클릭! </button>
+</div>
+</body>
+</html>
+<script>                       //버튼을 클릭햇을때 중괄호안이 실행된다 
+    $("#btn").on("click",()=>{
+        $("img").attr("src","../day2/media/jarong2.jpg");                  //attr 함수를 통해 변경할 수 있다 괄호안에는 1 변경할것 , 주소 또는 값입력  
+    });
+</script>

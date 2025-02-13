@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        tr, td, th {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fnUserList()">호출</button>
+    <div id="contents"></div>
+</body>
+</html>
+<script>
+    let table = document.createElement("table");
+    function fnUserList(){
+        table.innerHTML = "" // 값을 비워놓고 시작한다 
+        $.ajax({
+            url : "https://jsonplaceholder.typicode.com/users",
+            dataType : "json",
+            type : "GET",
+            data : {},
+            success : function(data) {                          //상단 헤더부분 
+                let rowHeader = document.createElement("tr");
+                rowHeader.innerHTML = 
+                "<th>아이디</th><th>이름</th><th>이메일</th><th>웹사이트</th>"
+                table.appendChild(rowHeader);
+
+               for(let i = 0; i< data.length; i++){ //데이터에 있는 개수 만큼 
+                let row = document.createElement("tr"); //행을 만든다 .
+                row.innerHTML = 
+                "<td>"+ data[i].id + "</td>"                  //데이터에 i 번째 값을 td에 넣어준다 
+                +"<td>"+ data[i].name + "</td>"
+                +"<td>" + data[i].email +"</td>"
+                +"<td>" + data[i].website +"</td>";
+
+
+                // let id = document.createElement("td");
+                // id.innerHTML = data[i].id;
+                // let name = document.createElement("td");
+                // name.innerHTML = data[i].name;
+                // let email = document.createElement("td");
+                // email.innerHTML = data[i].email;
+                // let website = document.createElement("td");
+                // website.innerHTML = data[i].website;
+                // table.appendChild(id);
+                // table.appendChild(name);//테이블에 넣는다 . 
+                // table.appendChild(email);
+                // table.appendChild(website);
+
+                table.appendChild(row);
+               }
+               let contents = document.querySelector("#contents");
+               contents.appendChild(table);                    
+            }
+            
+        });
+    }
+</script>

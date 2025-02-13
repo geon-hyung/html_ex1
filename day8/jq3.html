@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>자바</li>
+        <li>오라클</li>
+        <li><span>HTML</span></li>
+        <li>jquery</li>
+        <li>파이썬</li>
+    </ul>
+    <div>
+
+        <button id="btn" onclick="fnSelector()">클릭</button>
+    </div>
+
+
+</body>
+</html>
+<script>
+function fnSelector(){
+    // $("li:has(span)").css("color","red");
+    // $("li:eq(2)").css("color","red");
+    // $("li:gt(2)").css("color","red");           //인덱스 2보다 큰애들 
+    //  $("li:lt(2)").css("color","red");
+    //  $("li:even(2)").css("color","red"); 짝수 
+    //  $("li:odd(2)").css("color","red");  홀수
+    // $("li:first").css("color","red"); 첫번째 값 
+        $("li:last").css("color","red");    
+
+}
+</script>

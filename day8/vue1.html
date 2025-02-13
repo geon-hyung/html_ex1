@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        
+        <!-- 모든작업은 아이디가 앱 안에서 작업을 한다  -->
+        <!-- 로그인 입력 필드  <div v-if="name != ''"> 네임이 빈값일때만 인풋박스가 보이고 값을 입력했을때는 사라진다  --> 
+        <div v-if="name == ''">    
+            <input v-model="inputName"></input> 
+        </div>
+        <!-- elss if 사용시  -->
+        <div v-else-if="name == '홍길동'">        
+            {{name}}님은 신지입니다 .  
+        </div>
+        <!-- else 사용시 v-else 를 사용하고 disabled를 사용해서 더이상 입력받지 못하게 한다   -->
+        <div v-else="name == ''">       
+            <input v-model="inputName" disabled></input> 
+        </div>
+        
+
+
+         <!-- 입력한 값을 출력하고 싶을때 중괄호 두개 안에 변수를 입력한다  -->
+         <div>
+            {{name}}        
+            <button @click="fnName">클릭</button>                 
+        <!-- vue에선 @를사용한다  -->
+    </div>
+</body>
+</html>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                // 변수를 선언하는 부분 주의할점 : 리턴안에 변수를 선언할때는 키 : 밸류 ex = name:홍길동  이다  
+                name : "입력이름없음",
+                age : "",
+                inputName : ""
+               
+            };
+        },
+        methods: { 
+            // 함수(메소드)를 맵이기 때문에 키 밸류를 이곳에서 입력해준다 ex 함수 : function 
+            // 다른영역에서 변수에 접근할때는 this를 꼭 붙혀준다
+            fnName : function(){ 
+                let self = this;     //this 라는 객체를 self에 담아서 사용 // 함수의 중괄호 안에서 사용하기 때문에 기존 문법처럼 name = 을 사용하고 
+                self.name = self.inputName; 
+            }
+        },
+        mounted() {
+            // 처음 시작할 때 실행되는 부분
+        }
+    });
+
+    app.mount('#app');
+</script>
